@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gelato | The Artisanal Scoop</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#570008",
+              "tertiary-fixed-dim": "#eee0a6",
+              "background": "#fffbff",
+              "primary-fixed": "#f48498",
+              "secondary-container": "#8df48e",
+              "on-tertiary-fixed": "#4f461b",
+              "secondary-fixed": "#8df48e",
+              "primary-container": "#f48498",
+              "surface": "#fffbff",
+              "on-tertiary": "#ffffff",
+              "error": "#c0262d",
+              "surface-container-low": "#fdf9f3",
+              "surface-variant": "#ebe8e1",
+              "surface-container-highest": "#ebe8e1",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-dim": "#62582b",
+              "surface-container": "#f7f3ed",
+              "tertiary-fixed": "#fceeb3",
+              "on-primary-fixed-variant": "#611027",
+              "on-primary": "#ffffff",
+              "primary": "#a44558",
+              "surface-bright": "#fffbff",
+              "inverse-primary": "#f48498",
+              "on-secondary": "#ffffff",
+              "on-surface-variant": "#666460",
+              "secondary-dim": "#00671d",
+              "surface-dim": "#e6e2dc",
+              "inverse-surface": "#0f0e0c",
+              "tertiary-container": "#fceeb3",
+              "primary-dim": "#95394d",
+              "on-tertiary-container": "#62582b",
+              "secondary-fixed-dim": "#7fe581",
+              "secondary": "#007523",
+              "outline": "#82807c",
+              "surface-tint": "#a44558",
+              "primary-fixed-dim": "#e4778b",
+              "tertiary": "#6e6436",
+              "outline-variant": "#bcb9b4",
+              "on-secondary-container": "#005c19",
+              "on-primary-fixed": "#160004",
+              "on-error": "#ffffff",
+              "on-secondary-fixed": "#004611",
+              "on-tertiary-fixed-variant": "#6c6334",
+              "error-dim": "#9f0519",
+              "on-background": "#393835",
+              "error-container": "#fb5151",
+              "on-primary-container": "#54051e",
+              "on-secondary-fixed-variant": "#00671d",
+              "inverse-on-surface": "#9f9c98",
+              "surface-container-high": "#f1ede7",
+              "on-surface": "#393835"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Plus Jakarta Sans"],
+              "label": ["Plus Jakarta Sans"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-nav {
+            background: rgba(255, 251, 255, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .scoop-mask {
+            clip-path: ellipse(80% 100% at 50% 0%);
+        }
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 text-[#a44558] dark:text-[#f48498] hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="text-2xl font-bold tracking-tight text-[#a44558] dark:text-[#f48498] font-headline">Gelato</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#a44558] dark:text-[#f48498] font-bold transition-all duration-200" href="#">Home</a>
+<a class="text-[#393835] dark:text-stone-400 hover:scale-105 hover:text-[#a44558] transition-transform duration-300" href="#">Flavors</a>
+<a class="text-[#393835] dark:text-stone-400 hover:scale-105 hover:text-[#a44558] transition-transform duration-300" href="#">Events</a>
+<a class="text-[#393835] dark:text-stone-400 hover:scale-105 hover:text-[#a44558] transition-transform duration-300" href="#">Visit</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-[#a44558] dark:text-[#f48498] hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 text-center lg:text-left">
+<span class="inline-block px-4 py-1.5 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold tracking-widest uppercase mb-6">
+                        Artisanal &amp; Authentic
+                    </span>
+<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl text-on-background leading-[1.1] mb-8">
+                        Welcome to <span class="text-primary italic">Gelato</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed mx-auto lg:mx-0">
+                        Experience the velvety texture and vibrant flavors of Italy, handcrafted daily with organic ingredients and a dash of magic.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary/10">
+                            Explore Flavors
+                        </button>
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-full font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all">
+                            Find a Scoop Shop
+                        </button>
+</div>
+</div>
+<div class="relative flex justify-center items-center">
+<div class="absolute inset-0 bg-primary-container/20 organic-blob -z-10 blur-3xl scale-110"></div>
+<div class="relative w-full aspect-square max-w-xl">
+<img alt="Artisanal Gelato Cone" class="w-full h-full object-cover rounded-xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="close-up of a perfectly scooped strawberry and vanilla gelato in a golden waffle cone with a dreamy pastel pink background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMb2JojfIHSZwydKbo7ZQ3rFMMpESc8NUUtXwE7EfLZW3VQVLRCRoqPPN6nmfkXFUFglAvRAU_JA6x1l_YGcNKKgulZ44EWE8hFSTDTTPDBPFaOV8PRRB6JA7uNkesRtxTZNSpw0hmPUT2boQ73p7_Iz6YFn7AOJbC81VRqC10gp-MV32USDa_kdMTX2ovypd8uhuy2nLr0de2zksQC7F0_878zZ85DOdPs7IjvnazQ6XSp2PmjuZsf3xaHnK1KDoHk0XEv_kou_zZ"/>
+<!-- Floating Badge -->
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-6 rounded-xl shadow-xl border-l-4 border-primary max-w-[200px]">
+<p class="font-headline text-primary text-xl font-bold leading-tight">Hand-churned Every Morning</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story Section -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="order-2 md:order-1 relative">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Fresh Berries" class="rounded-xl aspect-square object-cover shadow-sm" data-alt="top down view of fresh raspberries and mint leaves on a rustic white surface with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzhQUjOmSqrDe_spRafLFXnmjceBaGCvM1br1NLisrI6BuWICIhNu3Frk0UX9k0p8FqsOjpkV6NCKXdRHBlcQU6xy0jU1I_oNThGhtc3TrTUCV52_WT-zrN2dO-NUafaM-CDyp5MQ5H9lWGBexiIOM1LixnbvqqVx9VEGqNkD8yhWBdpm_tl-0AyJCpA7qrzxNtimZO0qzj7QpioSYwHUC5miNxv_0ljVOFBOryGUyRx5-97b_18pll6N0AW_6SlhKXGoi3zRyFO6N"/>
+<img alt="Milk and Cream" class="rounded-xl aspect-square object-cover shadow-sm translate-y-8" data-alt="close up of rich organic cream being poured into a ceramic bowl with bubbles and smooth texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgQSQHOA9jGAoYqZMDJ1kwC9pm2s0Q76g6jQjmhEL-DuNf31ctllhtwtbRRl-AloukiXDT7ecoLnWgf7XGeUzz7jK0mIDrc51bgYN6oHeADqgEBwn_3mvEm_ZZfihZ1oj2lUz6eKunCrEoqbZbyHJ3bA8hDg_WiG6yyh2hylbM-VaqHoKDD96wtLJKj35Kf5EdqVsLNf6NC-q25u1XKudljHtZ_WTbM06qd9Z1lhigWoSqzbkJAq98hupT_ZolEzTJIu1IBUmlt2r"/>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline text-4xl md:text-5xl text-on-background mb-8">Our Story: <br/><span class="text-secondary italic">Pure Ingredients</span></h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                            It began in a small kitchen with a copper pot and a simple dream: to create the perfect scoop. No artificial syrups, no shortcuts. Just real fruit, mountain milk, and a lot of patience.
+                        </p>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-10">
+                            Today, we partner with local farmers to bring you seasonal delights that tell a story of the earth and its seasons.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline decoration-primary underline-offset-8 transition-all" href="#">
+                            Learn About Our Process
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Links (Bento Grid) -->
+<section class="py-24 px-6 max-w-7xl mx-auto">
+<h2 class="font-headline text-4xl text-center mb-16">Explore the Scoop</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[500px]">
+<!-- Flavors Card -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-tertiary-container flex flex-col justify-end p-8">
+<img alt="Gelato Display" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="vibrant display of artisanal gelato pans in a boutique shop with multiple flavors and colors like pistachio, berry, and chocolate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5D7dgkOciOpIxaGRINDNeoo-yNaghyYoTTUew4hNdoN-bN3MlH6NWKT3dtwiX5yHSIGUtrJ6YTyg3LAjtPG7pxzBCeGxiO9nowLCxUcmp0lCQ8tUQV0H35jz7EdbxK8lM4T6Ql3RcTzcoO4W4wiov3kvxzekXrpGbatwkhLKuiCELq9Eq2tGoG1Pxhs0RXQOkvAyzOLoEdfHPt6ckQiV1vfmzTFpQGI4Svxx2_jC1RGVCJP_gAvVl3tU3ZeuSf-SNslZ-GYnr2HKP"/>
+<div class="relative z-10">
+<h3 class="font-headline text-3xl text-on-tertiary-container mb-2">Our Flavors</h3>
+<p class="text-on-tertiary-container/80 max-w-sm mb-6">From classic Pistachio to seasonal Yuzu Lavender.</p>
+<button class="bg-tertiary text-on-tertiary px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-tertiary-dim transition-colors w-fit">
+                            Browse the Menu
+                            <span class="material-symbols-outlined" data-icon="icecream">icecream</span>
+</button>
+</div>
+</div>
+<!-- Locations Card -->
+<div class="group relative overflow-hidden rounded-xl bg-secondary-container flex flex-col justify-end p-8">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&amp;w=800&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-30 group-hover:scale-110 transition-transform duration-700" data-alt="aesthetic boutique shop exterior with a pastel pink door and flowers out front in a sunny European street"></div>
+<div class="relative z-10">
+<h3 class="font-headline text-3xl text-on-secondary-container mb-2">Scoop Shops</h3>
+<p class="text-on-secondary-container/80 mb-6">Find your nearest joy.</p>
+<button class="bg-secondary text-on-secondary px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-secondary-dim transition-colors w-fit">
+                            Locations
+                            <span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</button>
+</div>
+</div>
+<!-- Event Card -->
+<div class="group relative overflow-hidden rounded-xl bg-primary-container flex flex-col justify-end p-8 md:col-span-1">
+<div class="absolute inset-0 bg-white/10 group-hover:bg-transparent transition-colors"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-on-primary-container mb-4" data-icon="celebration">celebration</span>
+<h3 class="font-headline text-2xl text-on-primary-container mb-2">Gelato Events</h3>
+<p class="text-on-primary-container/80 mb-4 text-sm">Weddings, birthdays, and parties catered by us.</p>
+<a class="text-on-primary-container font-bold text-sm underline underline-offset-4" href="#">Book the Cart</a>
+</div>
+</div>
+<!-- Membership Card -->
+<div class="md:col-span-2 rounded-xl bg-surface-container-highest p-8 flex flex-col md:flex-row items-center justify-between gap-6 border-l-8 border-primary">
+<div>
+<h3 class="font-headline text-2xl text-on-surface mb-2">The Scoop Club</h3>
+<p class="text-on-surface-variant">Join our loyalty program and get every 10th scoop free!</p>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold whitespace-nowrap">Join Now</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fdf9f3] dark:bg-stone-950 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-7xl mx-auto">
+<div class="text-center md:text-left">
+<span class="text-lg font-serif italic text-[#393835] dark:text-stone-200">The Artisanal Scoop</span>
+<p class="text-[#666460] dark:text-stone-500 text-sm mt-2">© 2024 The Artisanal Scoop. Crafted with Joy.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-[#666460] dark:text-stone-500 hover:text-[#a44558] dark:hover:text-[#f48498] transition-colors text-sm" href="#">Privacy</a>
+<a class="text-[#666460] dark:text-stone-500 hover:text-[#a44558] dark:hover:text-[#f48498] transition-colors text-sm" href="#">Terms</a>
+<a class="text-[#666460] dark:text-stone-500 hover:text-[#a44558] dark:hover:text-[#f48498] transition-colors text-sm" href="#">Sustainability</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="star">star</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary cursor-pointer hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-xl" data-icon="share">share</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#fffbff]/80 dark:bg-stone-900/80 backdrop-blur-xl z-50 rounded-t-[3rem] shadow-[0_-4px_32px_rgba(57,56,53,0.06)]">
+<a class="flex flex-col items-center justify-center bg-[#fceeb3] dark:bg-[#6e6436] text-[#6e6436] dark:text-[#fceeb3] rounded-full px-5 py-2 scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter mt-1 font-label">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#666460] dark:text-stone-400 p-2 hover:bg-[#fdf9f3] dark:hover:bg-stone-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="icecream">icecream</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter mt-1 font-label">Flavors</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#666460] dark:text-stone-400 p-2 hover:bg-[#fdf9f3] dark:hover:bg-stone-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="celebration">celebration</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter mt-1 font-label">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#666460] dark:text-stone-400 p-2 hover:bg-[#fdf9f3] dark:hover:bg-stone-800 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter mt-1 font-label">Visit</span>
+</a>
+</nav>
+</body></html>
